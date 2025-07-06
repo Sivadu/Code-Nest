@@ -1,0 +1,347 @@
+/* General */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  scroll-behavior: smooth;
+}
+
+.app-body {
+  overflow-x: hidden;
+}
+/* logo */
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  z-index: 1000;
+  padding: 0;
+}
+
+.logo {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive resizing */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 70px;
+  }
+}
+/* Hero Section */
+.hero-wrapper {
+  background-image: url('./assets/image/home2.jpg'); /* adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-wrapper .display-4 {
+  font-size: 3.4rem; /* ⬅️ Increase this for bigger title */
+  font-weight: 800 ;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+
+}
+
+/* Make subheading larger */
+.hero-wrapper .lead {
+  font-size: 2.5rem; /* ⬅️ Adjust for subtext size */
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+
+}
+
+/* Button Style */
+.hero-wrapper .btn-primary {
+  font-size: 1.3rem;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  background-color: #3b82f6;
+  border: none;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Sparkling glow on hover */
+.hero-wrapper .btn-primary:hover {
+  background-color: #2563eb;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.8), 0 0 50px rgba(59, 130, 246, 0.5);
+}
+
+/* Optional: Pulse animation */
+@keyframes pulse-glow {
+  /* 0% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  } */
+  50% {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  }
+}
+
+/* Glowing pulse animation */
+
+Apply glow animation to the button
+.hero-wrapper .btn-primary {
+  animation: pulse-glow 2s infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #007bff;
+  border: none;
+}
+
+/* On hover: intensify glow and slightly scale */
+.hero-wrapper .btn-primary:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.6);
+  transform: scale(1.05);
+  background-color: #0069d9; /* slightly darker blue */
+}
+
+/* Content Container */
+.content-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 1rem;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.content-container h1,
+.content-container h2 {
+  color: white;
+}
+
+.about-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #000;
+}
+
+.about-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.about-card {
+  background-color: #111315;
+  border-radius: 16px;
+  padding: 40px;
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(12, 138, 228, 0.2); /* no blue glow */
+  transition: transform 0.3s ease;
+}
+
+.about-card.updated-about-box {
+  background-color: #111315;
+  border-radius: 16px;
+  padding: 50px;
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(96, 165, 250, 0.3); /* Blue glow */
+  transition: transform 0.3s ease;
+  
+  /* Text enhancements */
+  font-size: 10 rem;        /* Increased font size */
+  line-height: 2;            /* More breathing room between lines */
+  letter-spacing: 0.3px;     /* Slightly wider letters */
+  word-spacing: 1px;
+}
+
+
+.about-card ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.about-card li {
+  margin: 8px 0;
+  text-align: left;
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+}
+
+/* What you will learn */
+/* What You’ll Learn Section */
+.learn-section {
+  padding: 4rem 1rem;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.learn-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: white;
+  /* text-shadow: 0 0 10px #fdfdfd; */
+}
+
+/* Grid Container */
+.learn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card */
+.learn-card {
+  background-color: #1a1a1a;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(12, 138, 228, 0.2); /* no blue glow */
+  transition: transform 0.3s ease;
+}
+
+.learn-card:hover {
+  transform: translateY(-5px);
+}
+
+.learn-card .emoji {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 6px #60a5fa);
+}
+
+.learn-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.learn-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #d1d5db;
+}
+/* contact session */
+
+.contact-section {
+  background-color: #0d0d0d;
+  padding: 4rem 1rem;
+  color: white;
+  text-align: center;
+  border-top: 2px solid #3b82f6; /* blue top border */
+}
+
+.contact-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.blue {
+  color: #3b82f6;
+}
+
+.contact-subheading {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+}
+
+.email-line {
+  font-size: 1.1rem;
+}
+
+.email-link {
+  color: #3b82f6;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* shedule session */
+.schedule-section {
+  background-color: #000000; /* dark background */
+  padding: 4rem 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #60a5fa;
+  text-shadow: 0 0 10px rgba(0, 74, 165, 0.3);
+}
+
+/* This matches the "What You’ll Learn" cards */
+.schedule-box {
+  background-color: #1f1f1f; /* Match "What You'll Learn" box */
+  color: #fff;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(12, 138, 228, 0.2); /* no blue glow */
+  transition: transform 0.3s ease;
+}
+
+.schedule-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 800 and 600  */
+.strike-red {
+  color: red;
+  position: relative;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.strike-red::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: white; /* White strike-through */
+  transform: translateY(-50%);
+}
+
