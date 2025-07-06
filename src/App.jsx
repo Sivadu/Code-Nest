@@ -65,7 +65,7 @@ function App() {
   <div className="schedule-box p-4 rounded">
     <h4 className="mb-2">💻 Students with Laptop</h4>
     <p className="fs-4 fw-bold">
-      <span className="strike-red">₹600</span> <span className="text-success">₹499</span>
+      <span className="strike-red">₹800</span> <span className="text-success">₹599</span>
     </p>
   </div>
 
@@ -73,7 +73,7 @@ function App() {
   <div className="schedule-box p-4 rounded">
     <h4 className="mb-2">📱 Students without Laptop</h4>
     <p className="fs-4 fw-bold">
-      <span className="strike-red">₹800</span> <span className="text-success">₹599</span>
+      <span className="strike-red">₹600</span> <span className="text-success">₹499</span>
     </p>
   </div>
   </div>
@@ -134,7 +134,7 @@ function App() {
         </p>
 
         <a
-          href="https://wa.me/8089432421"
+          href="https://wa.me/918089432421"
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-success fw-bold shadow mb-4"
